@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+  </head>
+
+  <body>
+    <div class="h-full bg-slate-800">
+      <!-- appbar -->
+      <div
+        class="mb-8 flex h-12 items-center justify-center gap-x-4 bg-slate-700"
+      >
+        <h1 class="text-xl font-bold text-slate-300">
+          Inventory App Using JS & Tailwind
+        </h1>
+        <span
+          class="text0slate-300 flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 bg-slate-500"
+          >7</span
+        >
+      </div>
+      <!-- app content -->
+      <div class="container mx-auto max-w-sm">
+        <!-- category form -->
+        <div class="mb-8">
+          <button id= "open-category-btn" class="text-xl text-slate-500">Add new category</button>
+          <form id = "category-form"class="hidden flex flex-col gap-y-4 rounded-xl bg-slate-700 p-4">
+            <div>
+              <label for="category-title" class="mb-1 block text-slate-400"
+                >Category Title</label
+              >
+              <input
+                class="h-9 rounded-xl border border-slate-500 bg-transparent p-3 text-slate-200"
+                type="text"
+                name="category-title"
+                id="category-title"
+              />
+            </div>
+            <div>
+              <label
+                for="category-description"
+                class="mb-1 block text-slate-400"
+                >Category description</label
+              >
+              <textarea
+                class="w-full rounded-xl border border-slate-500 bg-transparent p-3 text-slate-200"
+                type="text"
+                name="category-description"
+                id="category-descrition"
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-between gap-x-4">
+              <button
+                id="cancle-new-category"class="flex-1 rounded-xl border border-slate-400 py-2 text-slate-300"
+              >
+                Cancle
+              </button>
+              <button
+                id="add-new-category" class="flex-1 rounded-xl bg-slate-500 py-2 text-slate-200"
+              >
+                Add New Category
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- product form -->
+        <div class="mb-6">
+          <h2 class="text-xl font-bold text-slate-300">Add New Product</h2>
+          <form class="flex flex-col gap-y-4 rounded-xl bg-slate-700 p-4">
+            <div>
+              <label for="product-title" class="mb-1 block text-slate-400"
+                >Product Title</label
+              >
+              <input
+                class="h-9 rounded-xl border border-slate-500 bg-transparent p-3 text-slate-200"
+                type="text"
+                name="product-title"
+                id="product-title"
+              />
+            </div>
+            <div>
+              <label for="product-quantity" class="mb-1 block text-slate-400"
+                >Quantity</label
+              >
+              <input
+                class="h-9 rounded-xl border border-slate-500 bg-transparent p-3 text-slate-200"
+                type="number"
+                name="product-quantity"
+                id="product-quantity"
+              />
+            </div>
+            <div>
+              <label for="product-category" class="mb-1 block text-slate-400"
+                >Category</label
+              >
+              <select
+                class="w-full rounded-xl border border-slate-500 bg-transparent p-3 text-slate-400"
+                name="product-category"
+                id="product-category"
+              >
+                
+                
+              </select>
+            </div>
+            <button id="add-new-product"class="flex-1 rounded-xl bg-slate-500 py-2 text-slate-200">
+              Add New Product
+            </button>
+          </form>
+        </div>
+        <!-- products list -->
+        <h2 class="text-xl text-slate-300 font-bold mb-2">Product list</h2>
+        <div class="flex items-center justify-between mb-2">
+          <label for="search-input" class="text-slate-400 text-lg ">search</label>
+          <input type="text" name="search-input" id="search-input"
+            class="bg-transparent rounded-xl border border-slate-500 text-slate-400">
+        </div>
+        <div class="flex items-center justify-between mb-6">
+          <label for="sort-products" class="text-slate-400 text-lg">sort</label>
+          <select name="sort-products" id="sort-products" class="bg-transparent text-slate-400 rounded-xl">
+            <option class="bg-slate-500 text-slate-300" value="">select a category</option>
+            <option class="bg-slate-500 text-slate-300" selected value="newest">newest</option>
+            <option class="bg-slate-500 text-slate-300" value="oldest">oldest</option>
+          </select>
+        </div>
+          <div class="flex flex-col gap-y-2 pb-20" id="products-list"></div>
+          <!-- single product item -->
+          <!-- <div class="flex items-center justify-between">
+            <span class="text-slate-400">react.js</span>
+            <div class="flex items-center gap-x-2">
+              <span>date</span>
+              <span
+                class="py-0.3 rounded-xl border border-slate-400 px-2 text-sm text-slate-400"
+                >front-end</span
+              >
+              <span
+                class="text0slate-300 flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 bg-slate-500 text-sm"
+                >7</span
+              >
+              <button
+                class="py-0.3 rounded-xl border border-red-400 px-2 text-sm text-red-400"
+              >
+                delete
+              </button>
+            </div>
+          </div> -->
+          <!-- single product item -->
+        </div>
+      </div>
+    </div>
+    <script src="/src/js/App.js" type="module"></script>
+  </body>
+</html>
